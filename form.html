@@ -1,0 +1,47 @@
+<!-- <?php
+include 'connect.php'
+if(isset($_POST['submit'])){
+    $name= $_POST['name'];
+    $id= $_POST['id'];
+    $stream= $_POST['stream'];
+
+    $sql="insert into 'addStudent' (name,id,stream) values('$name','$id','$stream')";
+    $result=mysqli($con,$sql);
+    if($result){
+        echo "Data Added Succesfully";
+    }
+    else{
+        die(mysqli_error($con));
+    }
+}
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.css">
+    <title>Add Student</title>
+</head>
+<body>
+<form method="POST">
+    <div class="fclass">
+      <label >Student's Name:</label>
+      <input type="text"  placeholder="Enter student name" name="name">
+    </div>
+    <div class="fclass">
+        <label >Student's ID:    </label>
+        <input type="number" placeholder="Enter student ID" name="id" >
+      </div>
+      <div class="fclass">
+        <label >Student's Stream:</label>
+        <input type="text" placeholder="Enter student stream" name="stream">
+      </div>
+    <button type="submit" name="submit">Submit</button>
+  </form>
+  </body>
+
+
